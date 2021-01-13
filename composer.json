@@ -19,7 +19,7 @@
     "require": {
         "php": "^8.0",
         "kovey/event": "^1.0",
-        "kovey/library": "^2.0",
+        "kovey/library": "^2.1",
         "kovey/container": "^1.0"
     },
     "require-dev": {
