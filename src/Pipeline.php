@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * @description 中间件管道
+ * @description pipeline
  *
- * @package     Middleware
+ * @package     Pipeline
  *
  * @time        2019-10-19 12:34:45
  *
@@ -25,21 +25,21 @@ class Pipeline implements PipelineInterface
     private EventInterface $event;
 
     /**
-     * @description 方法
+     * @description method
      *
      * @var string
      */
     private string $method;
 
     /**
-     * @description 容器
+     * @description container
      *
      * @var ContainerInterface
      */
     private ContainerInterface $container;
 
     /**
-     * @description 构造
+     * @description construct
      *
      * @param ContainerInterface $container
      *
@@ -51,7 +51,7 @@ class Pipeline implements PipelineInterface
     }
 
     /**
-     * @description 设置请求对象和相应对象
+     * @description send event
      *
      * @param EventInterface $event
      *
@@ -64,7 +64,7 @@ class Pipeline implements PipelineInterface
     }
 
     /**
-     * @description 设置中间件
+     * @description set middlewares
      *
      * @param Array $middlewares
      *
@@ -77,7 +77,7 @@ class Pipeline implements PipelineInterface
     }
 
     /**
-     * @description 设置方法
+     * @description set method
      *
      * @param string $method
      *

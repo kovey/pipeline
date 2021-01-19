@@ -24,5 +24,5 @@ interface MiddlewareInterface
      *
      * @return mixed
      */
-    public function handle(EventInterface $event, callable | Array $next);
+    public function handle(EventInterface $event, callable | Array $next) : mixed;
 }
