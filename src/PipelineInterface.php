@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @description 管道
+ * @description pipeline interface
  *
  * @package     PipelineInterface
  *
@@ -17,7 +17,7 @@ use Kovey\Event\EventInterface;
 interface PipelineInterface
 {
     /**
-     * @description 构造
+     * @description construct
      *
      * @param ContainerInterface $container
      *
@@ -26,7 +26,7 @@ interface PipelineInterface
     public function __construct(ContainerInterface $container);
 
     /**
-     * @description 设置请求对象和相应对象
+     * @description send event
      *
      * @param EventInterface $event
      *
@@ -35,7 +35,7 @@ interface PipelineInterface
     public function send(EventInterface $event) : PipelineInterface;
 
     /**
-     * @description 设置中间件
+     * @description through middlewares
      *
      * @param Array $middlewares
      *
@@ -44,7 +44,7 @@ interface PipelineInterface
     public function through(Array $middlewares) : PipelineInterface;
 
     /**
-     * @description 设置方法
+     * @description via method
      *
      * @param string $method
      *
@@ -53,7 +53,7 @@ interface PipelineInterface
     public function via(string $method) : PipelineInterface;
 
     /**
-     * @description 处理函数
+     * @description then callback
      *
      * @param callable | Array $description
      *

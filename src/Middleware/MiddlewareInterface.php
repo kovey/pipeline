@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @description 中间件接口
+ * @description Middleware Interface
  *
  * @package     Middleware
  *
@@ -16,7 +16,7 @@ use Kovey\Event\EventInterface;
 interface MiddlewareInterface
 {
     /**
-     * @description 中间件实现方法
+     * @description handle function
      *
      * @param EventInterface $event
      *
