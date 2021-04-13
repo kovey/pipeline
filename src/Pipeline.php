@@ -119,7 +119,7 @@ class Pipeline implements PipelineInterface
                 } elseif (!is_object($pipe)) {
                     list($name, $parameters) = $this->parsePipeString($pipe);
 
-                    $pipe = $this->container->get($name, $event->getTraceId());
+                    $pipe = $this->container->get($name, $event->getTraceId(), $event->getSpanId());
 
                     $parameters = array_merge(array($event, $stack), $parameters);
                 } else {
